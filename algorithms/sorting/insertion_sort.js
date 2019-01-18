@@ -11,3 +11,5 @@ const insertionSort = arr => {
 
   return arr;
 };
+
+// O(n^2)
