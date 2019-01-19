@@ -13,3 +13,4 @@
   - [Selection sort](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/algorithms/sorting/selection_sort.js)
   - [Insertion sort](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/algorithms/sorting/insertion_sort.js)
   - [Merge sort](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/algorithms/sorting/merge_sort.js)
+  - [Quick sort](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/algorithms/sorting/quick_sort.js)
