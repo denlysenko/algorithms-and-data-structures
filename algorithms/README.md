@@ -14,3 +14,4 @@
   - [Insertion sort](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/algorithms/sorting/insertion_sort.js)
   - [Merge sort](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/algorithms/sorting/merge_sort.js)
   - [Quick sort](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/algorithms/sorting/quick_sort.js)
+  - [Radix sort](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/algorithms/sorting/radix_sort.js)
