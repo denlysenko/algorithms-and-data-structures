@@ -1,7 +1,7 @@
 const swap = require('../../utils/swap');
 
 const partition = (arr, start, end) => {
-  const pivot = Math.floor(Math.random() * arr.length);
+  const pivot = Math.floor(Math.random() * (end - start + 1) + start);
 
   while (start <= end) {
     while (arr[start] < arr[pivot]) {
