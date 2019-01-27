@@ -16,3 +16,4 @@
   - [Quick sort](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/algorithms/sorting/quick_sort.js)
   - [Radix sort](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/algorithms/sorting/radix_sort.js)
   - [Counting sort](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/algorithms/sorting/counting_sort.js)
+  - [Bucket sort](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/algorithms/sorting/bucket_sort.js)

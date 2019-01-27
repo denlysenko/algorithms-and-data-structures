@@ -13,3 +13,4 @@ const insertionSort = arr => {
 };
 
 // O(n^2)
+module.exports = insertionSort;
