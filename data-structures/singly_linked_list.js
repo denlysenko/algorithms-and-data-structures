@@ -123,11 +123,11 @@ class SinglyLinkedList {
       return true;
     }
 
-    const previous = this.get(index - 1);
+    const prev = this.get(index - 1);
     const newNode = new Node(data);
-    const temp = previous.next;
+    const temp = prev.next;
 
-    previous.next = newNode;
+    prev.next = newNode;
     newNode.next = temp;
     this.length++;
     return true;
@@ -146,11 +146,29 @@ class SinglyLinkedList {
       return this.pop();
     }
 
-    const previous = this.get(index - 1);
-    const removed = previous.next;
+    const prev = this.get(index - 1);
+    const removed = prev.next;
 
-    previous.next = removed.next;
+    prev.next = removed.next;
     this.length--;
     return removed;
+  }
+
+  reverse() {
+    let node = this.head;
+    let prev = null;
+    let next;
+
+    this.head = this.tail;
+    this.tail = node;
+
+    for (let i = 0; i < this.length; i++) {
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+
+    return this;
   }
 }
