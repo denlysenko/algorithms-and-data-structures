@@ -12,10 +12,14 @@ class Stack {
     this.size = 0;
   }
 
+  isEmpty() {
+    return this.first === null;
+  }
+
   push(data) {
     const newNode = new Node(data);
 
-    if (!this.first) {
+    if (this.isEmpty()) {
       this.first = newNode;
       this.last = newNode;
     } else {
@@ -28,7 +32,7 @@ class Stack {
   }
 
   pop() {
-    if (!this.first) {
+    if (this.isEmpty()) {
       return null;
     }
 
@@ -43,5 +47,13 @@ class Stack {
 
     this.size--;
     return removedNode.data;
+  }
+
+  peek() {
+    if (this.isEmpty()) {
+      return null;
+    }
+
+    return this.first.data;
   }
 }
