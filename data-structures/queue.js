@@ -5,7 +5,7 @@ class Node {
   }
 }
 
-class Stack {
+class Queue {
   constructor() {
     this.first = null;
     this.last = null;
@@ -16,22 +16,21 @@ class Stack {
     return this.first === null;
   }
 
-  push(data) {
+  enqueue(data) {
     const newNode = new Node(data);
 
     if (this.isEmpty()) {
       this.first = newNode;
       this.last = newNode;
     } else {
-      const currentFirst = this.first;
-      this.first = newNode;
-      this.first.next = currentFirst;
+      this.last.next = newNode;
+      this.last = newNode;
     }
 
     return ++this.size;
   }
 
-  pop() {
+  dequeue() {
     if (this.isEmpty()) {
       return null;
     }
@@ -47,7 +46,7 @@ class Stack {
     return removedNode.data;
   }
 
-  peek() {
+  front() {
     if (this.isEmpty()) {
       return null;
     }
