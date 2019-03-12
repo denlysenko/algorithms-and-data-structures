@@ -66,7 +66,7 @@ class BinarySearchTree {
     return null;
   }
 
-  breadthFirstSearch() {
+  BFS() {
     const visited = [];
     const queue = [];
     let node;
@@ -88,14 +88,64 @@ class BinarySearchTree {
 
     return visited;
   }
+
+  DFSPreOrder() {
+    const visited = [];
+
+    const traverse = node => {
+      visited.push(node.data);
+
+      if (node.left) {
+        traverse(node.left);
+      }
+
+      if (node.right) {
+        traverse(node.right);
+      }
+    };
+
+    traverse(this.root);
+
+    return visited;
+  }
+
+  DFSPostOrder() {
+    const visited = [];
+
+    const traverse = node => {
+      if (node.left) {
+        traverse(node.left);
+      }
+
+      if (node.right) {
+        traverse(node.right);
+      }
+
+      visited.push(node.data);
+    };
+
+    traverse(this.root);
+
+    return visited;
+  }
+
+  DFSInOrder() {
+    const visited = [];
+
+    const traverse = node => {
+      if (node.left) {
+        traverse(node.left);
+      }
+
+      visited.push(node.data);
+
+      if (node.right) {
+        traverse(node.right);
+      }
+    };
+
+    traverse(this.root);
+
+    return visited;
+  }
 }
-
-const bst = new BinarySearchTree();
-bst.insert(10);
-bst.insert(6);
-bst.insert(15);
-bst.insert(3);
-bst.insert(8);
-bst.insert(20);
-
-console.log(bst.breadthFirstSearch());
