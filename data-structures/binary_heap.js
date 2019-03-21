@@ -2,15 +2,27 @@ const swap = require('../utils/swap');
 
 class MaxBinaryHeap {
   constructor() {
-    this.values = [41, 39, 33, 18, 27, 12];
+    this.values = [];
   }
 
   insert(value) {
     this.values.push(value);
-    this.heapify();
+    this.heapifyUp();
   }
 
-  heapify() {
+  extractMax() {
+    if (this.values.length === 0) {
+      return;
+    }
+
+    swap(this.values, 0, this.values.length - 1);
+    const max = this.values.pop();
+    this.heapifyDown();
+
+    return max;
+  }
+
+  heapifyUp() {
     let index = this.values.length - 1;
     const elem = this.values[index];
 
@@ -24,6 +36,26 @@ class MaxBinaryHeap {
 
       swap(this.values, index, parentIndex);
       index = parentIndex;
+    }
+  }
+
+  heapifyDown(index = 0) {
+    const arr = this.values;
+    let left = 2 * index + 1;
+    let right = 2 * index + 2;
+    let largest = index;
+
+    if (left < arr.length && arr[left] > arr[largest]) {
+      largest = left;
+    }
+
+    if (right < arr.length && arr[right] > arr[largest]) {
+      largest = right;
+    }
+
+    if (largest !== index) {
+      swap(arr, index, largest);
+      this.heapifyDown(largest);
     }
   }
 }
