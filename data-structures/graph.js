@@ -30,4 +30,50 @@ class Graph {
 
     delete this.adjacencyList[vertex];
   }
+
+  DFSRecursive(start) {
+    const result = [];
+    const visited = {};
+    const dfs = vertex => {
+      if (!vertex) {
+        return null;
+      }
+
+      visited[vertex] = true;
+      result.push(vertex);
+
+      this.adjacencyList[vertex].forEach(node => {
+        if (!visited[node]) {
+          return dfs(node);
+        }
+      });
+    };
+
+    dfs(start);
+
+    return result;
+  }
+
+  DFSIterative(start) {
+    const result = [];
+    const visited = {};
+    const stack = [start];
+    let currentVertex;
+
+    visited[start] = true;
+
+    while (stack.length) {
+      currentVertex = stack.pop();
+      result.push(currentVertex);
+
+      this.adjacencyList[currentVertex].forEach(node => {
+        if (!visited[node]) {
+          visited[node] = true;
+          stack.push(node);
+        }
+      });
+    }
+
+    return result;
+  }
 }
