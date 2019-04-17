@@ -11,3 +11,4 @@
 - [Priority Queue](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/data-structures/priority_queue.js)
 - [Hash Table](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/data-structures/hash_table.js)
 - [Graph](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/data-structures/graph.js)
+- [Weighted Graph](https://github.com/denlysenko/algorithms-and-data-structures/tree/master/data-structures/weighted_graph.js)
