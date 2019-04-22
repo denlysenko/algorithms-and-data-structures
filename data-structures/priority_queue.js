@@ -12,6 +12,10 @@ class PriorityQueue {
     this.values = [];
   }
 
+  isEmpty() {
+    return this.values.length === 0;
+  }
+
   enqueue(value, priority) {
     const node = new Node(value, priority);
     this.values.push(node);
@@ -68,3 +72,5 @@ class PriorityQueue {
     }
   }
 }
+
+module.exports = PriorityQueue;
